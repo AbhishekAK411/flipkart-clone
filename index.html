@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="register.js"></script>
+</head>
+<body>
+    <div id="screen">
+        <div class="inner-div">
+            <div class="inner-left">
+                <div class="left-top">
+                    <h2>Login</h2>
+                    <p>Get Access to your Orders, Wishlist and Recommendations</p>
+                </div>
+                <div class="left-bot">
+                    <img src="flipkart_login_image.jpg" alt="" />
+                </div>
+            </div>
+            <div class="inner-right">
+                <div class="right-top">
+                    <div class="right-inner">
+                        <form onsubmit="register(event)">
+                            <input id="flipkart_username" type="text" placeholder="Enter Username" />
+                            <input id="flipkart_email" type="email" placeholder="Enter Email Address" />
+                            <input id="flipkart_password" type="password" placeholder="Enter your Password" />
+                            <input id="flipkart_confirmPassword" type="password" placeholder="Confirm Your password" />
+                        </form>
+                        <div class="submit-button">
+                            <button onclick="register(event)">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="replace-text" class="right-bot"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        window.onload = () =>{
+            var replaceLogin = document.getElementById("replace-text");
+            var loginStructure = `<p onclick='redirectToLogin()'>Already have an account? Login here.</p>`;
+            replaceLogin.innerHTML = loginStructure;
+
+        }
+
+        function redirectToLogin(){
+            window.location.href = `./login.html`;
+        }
+
+
+    </script>
+</body>
+</html>

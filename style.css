@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#screen{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 5px solid red; */
+    background-color: rgb(2,41,84);
+}
+
+.inner-div{
+    width: 45%;
+    height: 80vh;
+    /* border: 2px solid black; */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.inner-left{
+    width: 45%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(40,116,240);
+}
+
+.left-top{
+    width: 100%;
+    height: 40%;
+    color: white;
+    padding: 15px;
+    /* border: 1px solid yellow; */
+}
+
+.left-top h2{
+    padding-top: 40px;
+}
+
+.left-top p{
+    font-size: 1.4em;
+    padding-top: 15px;
+    width: 90%;
+    color: rgb(156,172,230);
+}
+
+.left-bot{
+    width: 100%;
+    height: 45%;
+    /* border: 1px solid yellow; */
+}
+
+.left-bot img{
+    width: 100%;
+    height: 100%;
+}
+
+.inner-right{
+    width: 55%;
+    height: 100%;
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.right-top{
+    width: 100%;
+    height: 60%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-inner{
+    width: 95%;
+    height: 90%;
+    padding-left: 10px;
+    /* border: 1px solid red; */
+}
+
+.right-inner form{
+    padding-top: 10px;
+}
+
+.right-inner input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid lightgrey;
+    width: 95%;
+    padding: 15px;
+    font-size: 0.9em;
+}
+
+.submit-button{
+    padding-top: 20px;
+}
+
+.submit-button button{
+    width: 95%;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.1em;
+    background-color: rgb(251,100,27);
+}
+
+.right-bot{
+    width: 100%;
+    height: 7%;
+    /* border: 1px solid red; */
+    text-align: center;
+    color: rgb(40,116,240);
+    font-weight: bold;
+    font-size: 0.8em;
+}
