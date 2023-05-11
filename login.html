@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="register.js"></script>
+    <script src="login.js"></script>
 </head>
 <body>
     <div id="screen">
         <div class="inner-div">
             <div class="inner-left">
                 <div class="left-top">
-                    <h2>Register</h2>
+                    <h2>Login</h2>
                     <p>Get Access to your Orders, Wishlist and Recommendations</p>
                 </div>
                 <div class="left-bot">
@@ -23,37 +23,31 @@
             <div class="inner-right">
                 <div class="right-top">
                     <div class="right-inner">
-                        <form onsubmit="register(event)">
-                            <input id="flipkart_username" type="text" placeholder="Enter Username" />
-                            <input id="flipkart_email" type="email" placeholder="Enter Email Address" />
-                            <input id="flipkart_password" type="password" placeholder="Enter your Password" />
-                            <input id="flipkart_confirmPassword" type="password" placeholder="Confirm Your password" />
+                        <form onsubmit="login(event)">
+                            <input id="flipkart_login_email" type="email" placeholder="Enter Email Address" />
+                            <input id="flipkart_login_password" type="password" placeholder="Enter your Password" />
                         </form>
                         <div class="submit-button">
-                            <button onclick="register(event)">Submit</button>
+                            <button onclick="login(event)">Submit</button>
                         </div>
                     </div>
                 </div>
-                <div id="replace-login-text" class="right-bot"></div>
+                <div id="replace-register-text" class="right-bot"></div>
             </div>
         </div>
     </div>
 
-
     <script>
-
         window.onload = () =>{
-            var replaceLogin = document.getElementById("replace-login-text");
-            var loginStructure = `<p onclick='redirectToLogin()'>Already have an account? Login here.</p>`;
-            replaceLogin.innerHTML = loginStructure;
 
+            var replaceRegister = document.getElementById("replace-register-text");
+            var registerStructure = `<p onclick='redirectToRegister()'>Don't have an Account? Create your account.</p>`;
+            replaceRegister.innerHTML = registerStructure;
         }
 
-        function redirectToLogin(){
-            window.location.href = `./login.html`;
+        function redirectToRegister(){
+            window.location.href = `./index.html`;
         }
-
-
     </script>
 </body>
 </html>

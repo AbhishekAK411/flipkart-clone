@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#screen{
+    width: 100%;
+    height: 100vh;
+    /* border: 1px solid red; */
+}
+
+.navbar{
+    width: 100%;
+    height: 8vh;
+    /* border: 2px solid black; */
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(40,116,240);
+}
+
+.inner-nav{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid yellow; */
+}
+
+.flipkart-logo{
+    width: 10%;
+    height: 80%;
+    /* border: 1px solid red; */
+}
+
+.flipkart-logo img{
+    padding-top: 5px;
+    width: 100%;
+}
+
+.searchbar{
+    width: 50%;
+    height: 80%;
+    /* border: 1px solid red; */
+    padding-left: 10px;
+    display: flex;
+}
+
+.searchbar input{
+    width: 90%;
+    height: 40px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.svg{
+    width: 5%;
+    height: 40px;
+    /* border: 1px solid red; */
+    justify-self: center;
+    display: flex;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.svg svg{
+    align-self: center;
+    padding-right: 5px;
+}
+
+.Login-button{
+    width: 10%;
+    height: 80%;
+    /* border: 1px solid red; */
+}
+
+.Login-button button{
+    width: 90%;
+    height: 90%;
+    color: rgb(40,116,240);
+    border: none;
+    outline: none;
+    background-color: white;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.stores{
+    width: 35%;
+    height: 80%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+}
+
+.seller{
+    width: 31%;
+    height: 90%;
+    /* border: 1px solid yellow; */
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.more{
+    width: 25%;
+    height: 90%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid yellow; */
+}
+
+.cart{
+    width: 25%;
+    height: 90%;
+    display: flex;
+    color: white;
+    font-size: 1.1em;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid yellow; */
+}
+
+.logout{
+    width: 19%;
+    height: 80%;
+}
+
+.logout button{
+    width: 90%;
+    height: 90%;
+    color: rgb(40,116,240);
+    border: none;
+    outline: none;
+    background-color: white;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 2px;
+}

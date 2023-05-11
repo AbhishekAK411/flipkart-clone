@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+<body>
+    <div id="screen">
+        <div class="navbar">
+            <div class="inner-nav">
+                <div class="flipkart-logo">
+                    <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png" alt="" />
+                </div>
+                <div class="searchbar">
+                    <input type="text" placeholder="Search for Products, Brands and more" />
+                    <div class="svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#0e6cb4" viewBox="0 0 256 256"><path d="M192,112a80,80,0,1,1-80-80A80,80,0,0,1,192,112Z" opacity="0.2"></path><path d="M229.66,218.34,179.6,168.28a88.21,88.21,0,1,0-11.32,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg>
+                    </div>
+                </div>
+                <div id="replace-user" class="Login-button">
+                    <!-- <button>Login</button> -->
+                </div>
+                <div id="insert-logout" class="stores">
+                    <!-- <div class="seller">
+                        <p>Become a Seller</p>
+                    </div>
+                    <div class="more">
+                        <p>More</p>
+                    </div>
+                    <div class="cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><path d="M96,216a16,16,0,1,1-16-16A16,16,0,0,1,96,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,184,200ZM231.65,74.35l-28.53,92.71A23.89,23.89,0,0,1,180.18,184H84.07A24.11,24.11,0,0,1,61,166.59L24.82,40H8A8,8,0,0,1,8,24H24.82A16.08,16.08,0,0,1,40.21,35.6L48.32,64H224a8,8,0,0,1,7.65,10.35ZM213.17,80H52.89l23.49,82.2a8,8,0,0,0,7.69,5.8h96.11a8,8,0,0,0,7.65-5.65Z"></path></svg>
+                        <p>cart</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        window.onload = () =>{
+
+            var flipkart_currentUser = JSON.parse(localStorage.getItem("flipkart_current_user"));
+
+            if(!!flipkart_currentUser){
+
+                var divToAppendUserInfo = document.getElementById("replace-user");
+                var userStructure = `<button>${flipkart_currentUser.userName}</button>`;
+                divToAppendUserInfo.innerHTML = userStructure;
+
+                var divToAppendLogout = document.getElementById("insert-logout");
+                var logoutStructure = `<div class="seller">
+                        <p>Become a Seller</p>
+                    </div>
+                    <div class="more">
+                        <p>More</p>
+                    </div>
+                    <div class="cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><path d="M96,216a16,16,0,1,1-16-16A16,16,0,0,1,96,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,184,200ZM231.65,74.35l-28.53,92.71A23.89,23.89,0,0,1,180.18,184H84.07A24.11,24.11,0,0,1,61,166.59L24.82,40H8A8,8,0,0,1,8,24H24.82A16.08,16.08,0,0,1,40.21,35.6L48.32,64H224a8,8,0,0,1,7.65,10.35ZM213.17,80H52.89l23.49,82.2a8,8,0,0,0,7.69,5.8h96.11a8,8,0,0,0,7.65-5.65Z"></path></svg>
+                        <p>cart</p>
+                    </div>
+                    <div class="logout">
+                        <button onclick='logout()'>Logout</button>
+                    </div>`;
+                divToAppendLogout.innerHTML = logoutStructure;
+
+
+            } else {
+                var divToAppendRest = document.getElementById("insert-logout");
+                var restStructure = `<div class="seller">
+                        <p>Become a Seller</p>
+                    </div>
+                    <div class="more">
+                        <p>More</p>
+                    </div>
+                    <div class="cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><path d="M96,216a16,16,0,1,1-16-16A16,16,0,0,1,96,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,184,200ZM231.65,74.35l-28.53,92.71A23.89,23.89,0,0,1,180.18,184H84.07A24.11,24.11,0,0,1,61,166.59L24.82,40H8A8,8,0,0,1,8,24H24.82A16.08,16.08,0,0,1,40.21,35.6L48.32,64H224a8,8,0,0,1,7.65,10.35ZM213.17,80H52.89l23.49,82.2a8,8,0,0,0,7.69,5.8h96.11a8,8,0,0,0,7.65-5.65Z"></path></svg>
+                        <p>cart</p>
+                    </div>`;
+                
+                divToAppendRest.innerHTML = restStructure;
+
+                var callLogin = document.getElementById("replace-user");
+                var loginStructure = `<button onclick='redirectLogin()'>Login</button>`;
+                callLogin.innerHTML = loginStructure;
+            }
+
+
+
+
+        }
+
+        function logout(){
+            localStorage.removeItem("flipkart_current_user");
+            window.location.href = `./login.html`;
+        }
+
+        function redirectLogin(){
+            window.location.href = `./login.html`;
+        }
+
+
+    </script>
+</body>
+</html>
