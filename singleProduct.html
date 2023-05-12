@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Single Product</title>
     <link rel="stylesheet" type="text/css" href="home.css">
 </head>
 <body>
@@ -38,24 +38,13 @@
             </div>
         </div>
 
-        <div id="replace-category" class="category"></div>
-
-        <div class="main-slider">
-            <img src="https://rukminim1.flixcart.com/fk-p-flap/1688/280/image/af9ad775e5ad6f8b.jpg?q=50" alt="" />
-        </div>
-
-        <div id="replace-items-1" class="main-items-1"></div>
-
-        <div id="replace-items-2" class="main-items-2"></div>
-
-        <div class="footer"></div>
+        <div class="littlebar"></div>
 
     </div>
 
     <script>
 
-        window.onload = () =>{
-
+        window.onload = () => {
             var flipkart_currentUser = JSON.parse(localStorage.getItem("flipkart_current_user"));
 
             if(!!flipkart_currentUser){
@@ -101,93 +90,6 @@
                 callLogin.innerHTML = loginStructure;
             }
 
-
-
-            //category section fetched
-            var divToAppendCategory = document.getElementById("replace-category");
-            var categoryStorage = JSON.parse(localStorage.getItem("category_list"));
-            var categoryString = "";
-            for(var i=0;i<categoryStorage.length;i++){
-                categoryString += `<div class="inner-cat">
-                <div class="inner-image">
-                    <img src="${categoryStorage[i].c_link}" alt="" />
-                </div>
-                <div class="inner-text">
-                    <p>${categoryStorage[i].c_name}</p>
-                </div>
-            </div>`;
-            }
-            divToAppendCategory.innerHTML = categoryString;
-
-
-
-            //top products fetched
-            var divToAppendTopProduct = document.getElementById("replace-items-1");
-            var firstStructure = `<div class="inner-section">
-                <div class="section-top">
-                    <h2>Top Deals</h2>
-                    <div class="view-button">
-                        <button>View All</button>
-                    </div>
-                </div>
-                <div class="section-bot">
-                    <img src="Top deals.JPG" alt="" />
-                </div>
-            </div>`;
-
-            divToAppendTopProduct.innerHTML = firstStructure;
-
-            var topProductStorage = JSON.parse(localStorage.getItem("product_list_1"));
-            var topProductString = "";
-            for(var i=0;i<topProductStorage.length;i++){
-                topProductString += `<div class="inner-items">
-                <div class="items-top">
-                    <img src="${topProductStorage[i].p_img}" alt="" />
-                </div>
-                <div class="items-bot">
-                    <h4>${topProductStorage[i].p_name}</h4>
-                    <p>${topProductStorage[i].p_price}</p>
-                    <span>${topProductStorage[i].p_desc}</span>
-                </div>
-            </div>`;
-            }
-
-            divToAppendTopProduct.innerHTML += topProductString;
-
-
-
-            //Books section fetched
-            var divToAppendBookProduct = document.getElementById("replace-items-2");
-            var firstBookStructure = `<div class="inner-section">
-                <div class="section-top">
-                    <h2>Books, Toys & More</h2>
-                    <div class="view-button">
-                        <button>View All</button>
-                    </div>
-                </div>
-                <div class="section-bot">
-                    <img src="Top deals.JPG" alt="" />
-                </div>
-            </div>`;
-
-            divToAppendBookProduct.innerHTML = firstBookStructure;
-
-            var bookProductStorage = JSON.parse(localStorage.getItem("product_list_2"));
-            var bookProductString = "";
-            for(var i=0;i<bookProductStorage.length;i++){
-                bookProductString += `<div class="inner-items">
-                <div class="items-top">
-                    <img src="${bookProductStorage[i].p_img}" alt="" />
-                </div>
-                <div class="items-bot">
-                    <h4>${bookProductStorage[i].p_name}</h4>
-                    <p>${bookProductStorage[i].p_price}</p>
-                    <span>${bookProductStorage[i].p_desc}</span>
-                </div>
-            </div>`;
-            }
-
-            divToAppendBookProduct.innerHTML += bookProductString;
         }
 
         function logout(){
@@ -198,7 +100,6 @@
         function redirectLogin(){
             window.location.href = `./login.html`;
         }
-
 
     </script>
 </body>

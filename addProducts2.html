@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Products 2</title>
+</head>
+
+<body>
+    <div id="screen">
+        <form onsubmit="addProducts2(event)">
+            <label>Product Name</label><br />
+            <input id="product_name2" type="text" placeholder="Enter Product name" /><br /><br />
+            <label>Product Price</label><br />
+            <input id="product_price2" type="text" placeholder="Enter Product Price" /><br /><br />
+            <label>Product Description</label><br />
+            <input id="product_desc2" type="text" placeholder="Enter Product Description" /><br /><br />
+            <label>Product Image</label><br />
+            <input id="product_img2" type="text" placeholder="Enter Product URL" /><br /><br />
+            <input type="submit" value="Submit Data" /><br />
+        </form>
+    </div>
+
+    <script>
+
+        function addProducts2(event) {
+            event.preventDefault();
+            var p_name = document.getElementById("product_name2").value;
+            var p_price = document.getElementById("product_price2").value;
+            var p_desc = document.getElementById("product_desc2").value;
+            var p_img = document.getElementById("product_img2").value;
+
+            var product2_object = { p_name, p_price, p_desc, p_img };
+            var product2_storage = JSON.parse(localStorage.getItem("product_list_2")) || [];
+            product2_storage.push(product2_object);
+            localStorage.setItem("product_list_2", JSON.stringify(product2_storage));
+            alert("Product Added");
+        }
+
+    </script>
+
+</body>
+
+</html>

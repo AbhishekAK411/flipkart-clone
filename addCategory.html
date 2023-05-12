@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+</head>
+
+<body>
+    <div id="screen">
+        <form onsubmit="addCategory(event)">
+            <label>Enter Category Name</label><br />
+            <input id="category_name" type="text" placeholder="Enter category name" /><br /><br />
+            <label>Enter Category link</label><br />
+            <input id="category_link" type="text" placeholder="Enter Category URL" /><br /><br />
+            <input type="submit" value="Submit Data" /><br />
+        </form>
+    </div>
+
+    <script>
+
+        function addCategory(event) {
+            var c_name = document.getElementById("category_name").value;
+            var c_link = document.getElementById("category_link").value;
+
+            var category_object = { c_name, c_link };
+            var category_storage = JSON.parse(localStorage.getItem("category_list")) || [];
+            category_storage.push(category_object);
+            localStorage.setItem("category_list", JSON.stringify(category_storage));
+            alert("category added");
+        }
+
+    </script>
+</body>
+
+</html>
