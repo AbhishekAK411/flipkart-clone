@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Products</title>
+</head>
+
+<body>
+    <div id="screen">
+        <form onsubmit="addAppleProduct(event)">
+            <label>Product Name</label><br />
+            <input id="apple_name" type="text" placeholder="Enter Product name" /><br /><br />
+            <label>Product Price</label><br />
+            <input id="apple_price" type="text" placeholder="Enter Product Price" /><br /><br />
+            <label>Product Image</label><br />
+            <input id="apple_image" type="text" placeholder="Enter Product URL" /><br /><br />
+            <input type="submit" value="send apple data" />
+        </form>
+    </div>
+
+    <script>
+        function addAppleProduct(event){
+            event.preventDefault();
+
+            var a_name = document.getElementById("apple_name").value;
+            var a_price = document.getElementById("apple_price").value;
+            var a_img = document.getElementById("apple_image").value;
+
+            var apple_object = {a_name, a_price, a_img};
+
+            var apple_storage = JSON.parse(localStorage.getItem("apple_products")) || [];
+            apple_storage.push(apple_object);
+            localStorage.setItem("apple_products", JSON.stringify(apple_storage));
+            alert("Apple Product Added");
+            document.getElementById("apple_name").value = "";
+            document.getElementById("apple_price").value = "";
+            document.getElementById("apple_image").value = "";
+        }
+    </script>
+</body>
+
+</html>
