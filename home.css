@@ -7,7 +7,7 @@
 
 #screen{
     width: 100%;
-    height: 100vh;
+    height: 150vh;
     /* border: 1px solid red; */
     background-color: rgb(241,243,246);
 }
@@ -332,14 +332,84 @@
     height: 100%;
 }
 
+.littlebar{
+    width: 100%;
+    height: 8vh;
+    /* border: 1px solid red; */
+    position: relative;
+    top: 5%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.little-inner{
+    width: 9.5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.little-inner p{
+    font-weight: bold;
+    font-size: 0.8em;
+    white-space: nowrap;
+    word-spacing: -1px;
+}
+
+.main-cont{
+    width: 100%;
+    height: 100vh;
+    /* border: 1px solid red; */
+    position: relative;
+    top: 6%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.content-left{
+    width: 20%;
+    height: 100%;
+    /* border: 1px solid red; */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.filters{
+    width: 100%;
+    height: 15vh;
+    border: 1px solid red;
+}
+
+.filter-cat{
+    width: 100%;
+    height: 12vh;
+    border: 1px solid red;
+}
+
+.content-right{
+    width: 78%;
+    height: 100%;
+    /* border: 1px solid red; */
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
 
 
 .footer{
     width: 100%;
     height: 50vh;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     position: relative;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     top: 20%;
+    bottom: 0;
     background-color: rgb(23,35,55);
 }
